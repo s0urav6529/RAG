@@ -1,0 +1,9 @@
+langchain
+langchain-ollama    
+langchain_openai 
+langchain-chroma
+langchain-community
+langgraph
+python-dotenv
+pandas
+pypdf
