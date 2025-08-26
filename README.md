@@ -11,7 +11,10 @@ This project implements a Retrieval-Augmented Generation (RAG) system using Fast
     │   ├── core/
     │   │   ├── retrieval.py      # Retrieval functions using FAISS
     │   |   ├── pipeline.py       # RAG pipeline combining retrieval and generation
-    │   |   └── logging.py        # Custom logging setup
+    │   |   └── indexing.py       # Indexing steps setup
+    |   |   └── model_emb.py      # How the model will embed data
+    |   |   └── genaration.py     # Answer genaration process
+    |   |   └── load_docs.py      # Which types of data or docs model will process
     │   ├── configs/
     │       ├── config.yaml               # Configuration for environment variables and API keys
     │       └── logging_config.yaml       # Store the logs of configs
@@ -21,6 +24,9 @@ This project implements a Retrieval-Augmented Generation (RAG) system using Fast
     |   └── pdf/                  # Raw pdf data for indexing
     |   └── processed/            # Folder for store the priocessed data in the vcetor database(chroma.sqlit3)
     │
+    |__ pydantic_models/
+    |   └── rag_model.py          # Defining the state of the model(question, context & answer)
+    |
     ├── requirements.txt          # List of dependencies for the project
     ├── README.md                 # Project documentation
     ├── .env                      # Environment variables for API keys and configurations
